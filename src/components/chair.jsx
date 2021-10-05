@@ -7,6 +7,10 @@ export const Seat = ({table,seat}) => {
     console.log(dataContext);
 
     return(
-        <button onClick={e=>{}}></button>
+        <button onClick={e=>{
+            const data = {...dataContext.contextData};
+            data.Sandwich[0][0] += 1;
+            dataContext.setcontextData(data);
+        }}>{dataContext.contextData.Sandwich[0][0]}</button>
     )
 }

@@ -3,10 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { SandwichContext, SandwichProvider } from './providers/sandwichProvider';
+
+const initialize = {Name: "U Poníka", Sandwich: [[0,0,1], [1,0]]}
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <SandwichProvider value={initialize}>
+      <App />
+    </SandwichProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
